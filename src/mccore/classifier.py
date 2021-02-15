@@ -37,4 +37,4 @@ class Classifier:
         x = preprocessing.prepare_input(name)
         x = self.vectorizer.transform(np.array([x]))
         y = self.model.predict_proba(x)
-        return prediction.get_label(y, self.labels)
+        return prediction.get_class(y, self.labels)
